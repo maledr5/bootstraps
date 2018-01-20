@@ -7,10 +7,10 @@
 
 ## Set up
 
-After cloning your app, run the following command:
+After cloning your app, run the following commands:
 
 ```
-heroku git:remote -a fiduamericas-portafolio-api
+heroku git:remote -a <heroku-app-name>
 pip install pipenv
 ```
 
@@ -31,3 +31,10 @@ Install dependencies:
 ```
 pipenv install
 ```
+
+Quick virtual env:
+
+```
+deactivate
+```
+
