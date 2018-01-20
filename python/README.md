@@ -32,7 +32,7 @@ Install dependencies:
 pipenv install
 ```
 
-Quick virtual env:
+Quit virtual env:
 
 ```
 deactivate
