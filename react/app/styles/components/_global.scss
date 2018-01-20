@@ -1,0 +1,338 @@
+
+
+html { overflow-x: hidden; }
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $font-main;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-size: 1.1em;
+    line-height: 1.8;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	font-size: 1em;
+    line-height: 1.8;
+}
+
+
+// 1. General styles
+// ==========================================================================
+
+
+.block-display {
+	display: block;
+}
+
+.center-text {
+	text-align: center;
+}
+
+h1, h2, h3, h4, h5 {
+	font-weight: 400;
+}
+
+h1 {
+	font-family: $font-second;
+	font-size: 2.5em;
+	margin: 20px 0;
+}
+
+h2 {
+	font-family: $font-second;
+	font-size: 2em;
+}
+
+h3 {
+	font-family: $font-second;
+	font-size: 1.2em;
+}
+
+h4 {
+	font-family: $font-main;
+	font-size: 1.3em;
+}
+
+h5 {
+	font-family: $font-main;
+	font-size: 2em;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	margin: 20px;
+}
+
+@media #{$small-and-down} {
+	h5 { font-size: 1.8em; }
+	h2 { font-size: 1.8em; }
+}
+
+p {
+	font-family: $font-main;
+}
+
+p.main {
+	font-size: 1.5em;
+	line-height: 2em;
+}
+
+p.second {
+	font-size: 1.2em;
+	line-height: 1.8em;
+}
+
+p.normal {
+	font-size: 1em;
+}
+
+.hightlight {
+	font-family: $font-second;
+	font-size: 2.5em;
+}
+
+@media #{$small-and-down} {
+	p.main {font-size: 1.3em; line-height: 1.8em;}
+	p.second {font-size: 1.1em; line-height: 1.5em;}
+}
+
+.text-light {
+	color: $white;
+}
+
+.text-dark {
+	color: $grey;
+}
+
+.text-main {
+	color: $main-color;
+}
+
+.text-sec {
+	color: $sec-color;
+}
+
+.text-center-align {
+	text-align: center;
+}
+
+.left { text-align: left; }
+.right { text-align: right; }
+
+.quote-main { background-image: url(../images/quote.svg); }
+.quote-light { background-image: url(../images/quote_light.svg); }
+.quote-dark { background-image: url(../images/quote_dark.svg); }
+
+.quote-icon {
+    width: 100px;
+    height: 70px;
+    min-width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
+}
+
+@media #{$small-and-down} {
+	.quote-icon {
+		margin-right: 0;
+		min-width: 85px;
+	}
+}
+
+#quote {
+	@extend %flexbox;
+}
+
+.page-header {
+	background-color: $light-grey;
+	padding: 40px 0;
+	margin-bottom: 40px;
+}
+
+.header-division {
+	border-bottom: 2px solid $main-color;
+	width: 83%;
+	margin-bottom: 40px;
+}
+
+.header-division-no-margin {
+	margin-bottom: 0;
+}
+
+.flex-center {
+	@extend %flexbox;
+	@include justify-content(space-around);
+}
+
+.pdf-icon {
+	background-image: url("../images/icons/icon_pdf.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+// 2. Buttons, Anchors and Submit Elements
+// ==========================================================================
+
+a:-webkit-any-link { text-decoration: none; }
+
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
+a,
+input[type=button],
+input[type=submit] {
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.2s;
+}
+
+// DON'T REMOVE OUTLINE, CHANGE THE DEFAULT COLOR. ACCESSIBILITY REQUIRIMENT.
+
+// a:focus {
+// 	outline: none;
+// }
+
+
+// 3. Form Elements
+// ==========================================================================
+
+@mixin placeholder($selector, $color) {
+  #{$selector}::-webkit-input-placeholder {color: $color}
+  #{$selector}::-moz-placeholder          {color: $color}
+  #{$selector}:-moz-placeholder           {color: $color}
+  #{$selector}:-ms-input-placeholder      {color: $color}
+}
+
+select {
+    background-color: $white;
+    border-color: $main-color;
+    height: 48px;
+    margin: 7px 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0px;
+    -moz-appearance: none;
+    -moz-border-radius: 0px;
+    -mox-box-shadow: none;
+}
+input[type=email].input-light,
+input[type=tel].input-light,
+input[type=text].input-light,
+textarea.input-light {
+	background-color: $main-opacity;
+	color: $white;
+	border: 0;
+}
+input[type=email].input-main,
+input[type=tel].input-main,
+input[type=text].input-main,
+textarea.input-main,
+select.input-main {
+	color: $main-color;
+	border: 1px solid $main-color;
+}
+
+input[type=text].input-main,
+input[type=text].input-light,
+input[type=email].input-main,
+input[type=email].input-light,
+input[type=tel].input-main,
+input[type=tel].input-light,
+textarea.input-light,
+textarea.input-main {
+	font-size: 1.1em;
+	text-align: left;
+	padding: 7px 0px 7px 20px;
+	margin: 7px 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+@include placeholder('input', #9ebeda);
+@include placeholder('textarea', #9ebeda);
+
+input:focus,
+textarea:focus,
+select:focus {
+	outline: none;
+	-mox-box-shadow: none;
+}
+
+input:required {
+    box-shadow:none;
+}
+
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #0057a2;
+	outline: none;
+}
+
+select:-moz-focus-inner {
+	border: none;
+}
+
+/* Change the yellow of autofill to any color ;) */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
+.material-icons.icon-light {
+	color: $white;
+}
+
+.material-icons.icon-main {
+	color: $main-color;
+}
+
+// A. Caret - arrow
+// ==========================================================================
+
+.caret {
+	border: solid black;
+	border-width: 0 2px 2px 0;
+	border-color: $main-color;
+	display: inline-block;
+	padding: 6px;
+}
+
+.caret-right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.caret-left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.caret-up {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+.caret-down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+
+// B. List
+// ==========================================================================
+
+ul.no-bullets { list-style-type: none; }
+
