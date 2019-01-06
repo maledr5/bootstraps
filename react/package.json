@@ -1,7 +1,7 @@
 {
-  "name": "Fiduamericas",
+  "name": "Project",
   "version": "1.0.0",
-  "description": "Fiduamericas content site",
+  "description": "Some description",
   "main": "index.js",
   "scripts": {
     "dev": "webpack -d --watch",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maledr5/fiduamericas.git"
+    "url": "git+https://github.com/maledr5/bootstraps.git"
   },
   "keywords": [
     "fiduamericas"
@@ -18,9 +18,9 @@
   "author": "@maledr5",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/maledr5/fiduamericas/issues"
+    "url": "https://github.com/maledr5/bootstraps/issues"
   },
-  "homepage": "https://github.com/maledr5/fiduamericas#readme",
+  "homepage": "https://github.com/maledr5/bootstraps#readme",
   "dependencies": {
     "axios": "^0.16.2",
     "babel-core": "^6.25.0",
