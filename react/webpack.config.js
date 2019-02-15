@@ -19,7 +19,13 @@ var config = {
         loader: 'babel-loader',
         query:
         {
-          presets:['react', 'es2015']
+          presets:[
+            '@babel/preset-env',
+            '@babel/preset-react',
+            {'plugins': [
+              '@babel/plugin-proposal-class-properties'
+            ]}
+          ]
         }
       },
       {
