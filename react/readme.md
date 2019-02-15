@@ -11,7 +11,7 @@ To avoid Routing issues, run locally in a server:
 With webpack, port 8080:
 
 ```
-npm run server
+npm start
 ```
 
 With python, port 8000:

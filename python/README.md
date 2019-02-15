@@ -38,3 +38,9 @@ Quit virtual env:
 deactivate
 ```
 
+To install new python packages:
+
+```
+pipenv install <packageName>
+```
+
